@@ -1,2 +1,2 @@
 #!/bin/bash
-rm -r *.{[a-z],[A-Z]}~
+rm -r ?~
