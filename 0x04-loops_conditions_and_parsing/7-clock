@@ -2,7 +2,7 @@
 #7-clock printout
 i=0
 j=0
-while [ "$i" -lt 12 ]
+while [ "$i" -lt 13 ]
 do
 	echo "Hour: $i"
 	while [ "$j" -lt 59 ]
