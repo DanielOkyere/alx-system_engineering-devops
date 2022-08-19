@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#list all of the strings after 
+LIST="$(ls)"
+for i in $LIST; do
+	NEWNAME=$(echo "$i" | cut -d "-" -f 4)
+	cp "$i" "$NEWNAME"
+done
