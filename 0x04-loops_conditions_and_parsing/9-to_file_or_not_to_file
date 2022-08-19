@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #check if school exist
-dev="./school"
+dev="school"
 if [ -e "$dev" ]
 then 
 	echo "school file exists"
@@ -10,7 +10,7 @@ then
 		echo "school file is empty"
 	fi
 
-	if [ -f "$file" ]; then
+	if [ -f "$dev" ]; then
 		echo "school is a regular file"
 	fi
 else
