@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#kill from infinty and beyon
+pkill -f 7-highlander
