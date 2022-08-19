@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#print all your processes user friendly mode
+ps -auxf
