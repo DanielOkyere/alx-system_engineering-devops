@@ -19,12 +19,12 @@ if __name__ == "__main__":
         file_name = '{}.csv'.format(args)
         to_file = []
         for i in range(len(tasks)):
-            to_file.append(['{}'.format(employee['id']),
-                           '{}'.format(employee['username']),
-                            '{}'.format(tasks[i]['completed']),
-                            '{}'.format(tasks[i]['title'])])
+            to_file.append(["{}".format(employee['id']),
+                           "{}".format(employee['username']),
+                            "{}".format(tasks[i]['completed']),
+                            "{}".format(tasks[i]['title'])])
         with open(file_name, 'w') as f:
-            writer = csv.writer(f)
+            writer = csv.writer(f, quoting=csv.QUOTE_ALL)
             writer.writerows(to_file)
 
         f.close()
