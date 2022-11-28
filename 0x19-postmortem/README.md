@@ -9,7 +9,7 @@ From 11:40 GMT to 12:00 GMT, requests to https://danielokyere.tech resulted in â
 The issue affected 100% of traffic to the server. The root cause of this was an invalid configuration for the Nginx web server.
 
 ## Timeline
---
+
 - 11:40 GMT: Configuration push begins
 - 11:42 GMT: Outage begins
 - 11:42 GMT: Pager alerts teams
@@ -20,7 +20,7 @@ The issue affected 100% of traffic to the server. The root cause of this was an 
 
 
 ## Root Cause
---
+
 At 11:40 GMT, a configuration change was immediately released to the production environment without being released to the testing environment. The change triggered a failure on restarting Nginx services in servers. 
 
 
@@ -30,7 +30,7 @@ This prevented all requests to the server to be properly handled. The internal m
 Traffic was permanently queued waiting for a serving thread to become available. The server began restarting and failed to start service and at 11:42 GMT the outage began.
 
 ## Resolution
---
+
 At 11:42 GMT, the monitoring systems alerted our engineers who investigated and quickly escalated the issue. By 11:45 GMT, the incident response team identified the monitoring system was exacerbating the problem caused by this bug.
 At 11:45 GMT, we attempted to rollback the problematic configuration change. 
 The rollback failed due to complexity of the system. These problems were addressed and we successfully rolled back at 11:50 GMT
@@ -39,7 +39,6 @@ The rollback failed due to complexity of the system. These problems were address
 To help recovery, some monitoring systems were turned off which were triggered by the bug. As a result servers were restarted gradually to avoid possible cascading features from a wide scale restart. By 11:52 GMT 60% of traffic was restored and 100% of traffic was routed to servers on port 80
 
 ## Corrective & Preventive measures
------------------------------------
 
 The following day, we conducted an internal review and analysis of the outage. We would be taking the following actions to address the underlying causes of the issue and help prevent recurrence and improve response times.
 
